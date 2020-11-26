@@ -1,7 +1,7 @@
 # node-starter
 
-![Node.js CI](https://github.com/pxlprfct/node-starter/workflows/Node.js%20CI/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pxlprfct_node-starter&metric=alert_status)](https://sonarcloud.io/dashboard?id=pxlprfct_node-starter)
+![Node.js CI](https://github.com/JulianOstmo/XPFarm_OrangeBelt/workflows/Node.js%20CI/badge.svg)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=JulianOstmo_XPFarm_OrangeBelt)](https://sonarcloud.io/dashboard?id=JulianOstmo_XPFarm_OrangeBelt)
 
 ## What is this?
 

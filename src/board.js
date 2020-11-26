@@ -1,6 +1,6 @@
 class Board {
   constructor() {
-    this.sqaures = [
+    this.squares = [
       '+-+-+-+',
       '| | | |',
       '+-+-+-+',
@@ -11,7 +11,7 @@ class Board {
     ].join('\n');
     this.message = '[Sandbox 3x3] Game created';
 
-    console.log(`${this.sqaures}\n\n${this.message}`);
+    console.log(`${this.squares}\n\n${this.message}`);
   }
 }
 

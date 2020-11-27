@@ -1,7 +1,8 @@
 # node-starter
 
 ![Node.js CI](https://github.com/JulianOstmo/XPFarm_OrangeBelt/workflows/Node.js%20CI/badge.svg)
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=JulianOstmo_XPFarm_OrangeBelt)](https://sonarcloud.io/dashboard?id=JulianOstmo_XPFarm_OrangeBelt)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=JulianOstmo_XPFarm_OrangeBelt&metric=coverage)](https://sonarcloud.io/dashboard?id=JulianOstmo_XPFarm_OrangeBelt)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=JulianOstmo_XPFarm_OrangeBelt&metric=bugs)](https://sonarcloud.io/dashboard?id=JulianOstmo_XPFarm_OrangeBelt)
 
 ## What is this?
 

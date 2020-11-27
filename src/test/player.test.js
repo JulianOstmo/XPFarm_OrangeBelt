@@ -5,7 +5,7 @@ const {
   MIDDLE_MIDDLE,
   MIDDLE_BOTTOM,
   LEFT_BOTTOM,
-} = require('../coordinates');
+} = require('./COORDINATES');
 
 describe('Player initialisation', () => {
   it('should create instance of Player with a new Board', () => {

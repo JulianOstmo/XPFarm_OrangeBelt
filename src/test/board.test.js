@@ -4,7 +4,7 @@ const {
   MIDDLE_MIDDLE,
   MIDDLE_BOTTOM,
   LEFT_BOTTOM,
-} = require('../coordinates');
+} = require('./COORDINATES');
 
 describe('Game board creation phase', () => {
   const consoleLogSpy = jest.spyOn(global.console, 'log');

@@ -4,6 +4,7 @@
 - mines
 - squares
 - neighbour square
+- clear square
 - step
 - flag
 - player
@@ -34,8 +35,15 @@
 - ✅ TECHDEBT - board.js squares should be a two dimensional array
 - ✅ Fix test coverage
 
+# Pomodoro 4
+- must be able to assign mine location on Board initialisation
+- check stepped on square if it is a mine or clear
+- if square is clear, show number of mines square touches
+- update message with number of neighbouring mines
+
 # Tech Debt
 
 - Board could be passed he output callback method (i.e. console.log)
 - Mine could be it's own class
 - Guards needed (e.g. if `x` or `y` passed is `null`)
+- Board.stepOnSquare hardcoded

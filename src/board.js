@@ -33,12 +33,21 @@ class Board {
     return `${formatted}\n\n${this.message}`;
   }
 
-  stepOnSquare(x, y) {
-    // check if coordinates are a bomb
-    // if (this.mines[x][y]) {
-    this.squares[x][y] = 'X';
-    this.message = '[Sandbox 3x3] BOOM! - Game Over.';
-    // }
+  /* eslint-disable class-methods-use-this */
+  countNeighbouringMines() {
+    return 3;
+  }
+
+  stepOnSquare(y, x) {
+    // check if coordinates are a mines
+    if (this.mines[y][x]) {
+      this.squares[y][x] = 'X';
+      this.message = '[Sandbox 3x3] BOOM! - Game Over.';
+    } else {
+      // count neighbouring mines
+      this.squares[y][x] = `${this.countNeighbouringMines()}`;
+      this.message = '[Sandbox 3x3] 3 mines around your square.';
+    }
 
     // print board
     console.log(this.printBoard());

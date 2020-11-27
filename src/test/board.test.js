@@ -1,4 +1,10 @@
 const Board = require('../board');
+const {
+  LEFT_MIDDLE,
+  MIDDLE_MIDDLE,
+  MIDDLE_BOTTOM,
+  LEFT_BOTTOM,
+} = require('../coordinates');
 
 describe('Game board creation phase', () => {
   const consoleLogSpy = jest.spyOn(global.console, 'log');
@@ -37,9 +43,6 @@ describe('Game board creation phase', () => {
   });
 
   it('should be created with 3 mines surrounding the bottom left corner square', () => {
-    const LEFT_MIDDLE = [1, 0];
-    const MIDDLE_MIDDLE = [1, 1];
-    const MIDDLE_BOTTOM = [2, 1];
     const mineCoordinates = [LEFT_MIDDLE, MIDDLE_MIDDLE, MIDDLE_BOTTOM];
     const board = new Board(mineCoordinates);
     expect(mineCoordinates.every(([y, x]) => board.mines[y][x])).toBe(true);
@@ -48,9 +51,21 @@ describe('Game board creation phase', () => {
 
 describe('Revealing square value', () => {
   it('should add explosion ("X") to board when bomb stepped on', () => {
-    const [x, y] = [1, 1];
-    const board = new Board();
-    board.stepOnSquare(x, y);
-    expect(board.squares[x][y]).toBe('X');
+    const [y, x] = MIDDLE_MIDDLE;
+    const board = new Board([MIDDLE_MIDDLE]);
+
+    board.stepOnSquare(y, x);
+
+    expect(board.squares[y][x]).toBe('X');
+  });
+
+  it('should reveal "3" on the board when stepping on the bottom left square', () => {
+    const mineCoordinates = [LEFT_MIDDLE, MIDDLE_MIDDLE, MIDDLE_BOTTOM];
+    const board = new Board(mineCoordinates);
+
+    const [y, x] = LEFT_BOTTOM;
+    board.stepOnSquare(y, x);
+
+    expect(board.squares[y][x]).toBe('3');
   });
 });

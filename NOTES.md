@@ -37,13 +37,13 @@
 
 # Pomodoro 4
 - ✅ must be able to assign mine location on Board initialisation
-- check stepped on square if it is a mine or clear
-- if square is clear, show number of mines square touches
-- update message with number of neighbouring mines
+- ✅ check stepped on square if it is a mine or clear
+- ✅ if square is clear, show number of mines square touches
+- ✅ update message with number of neighbouring mines
 
 # Tech Debt
-
+- Board should be initialised with it's size (e.g. 3x3);
 - Board could be passed he output callback method (i.e. console.log)
 - Mine could be it's own class
 - Guards needed (e.g. if `x` or `y` passed is `null`)
-- Board.stepOnSquare hardcoded
+- Board.countNeighbouringMines() is hardcoded

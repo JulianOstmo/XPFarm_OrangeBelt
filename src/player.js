@@ -3,8 +3,8 @@ class Player {
     this.board = board;
   }
 
-  takeStep(x, y) {
-    this.board.stepOnSquare(x, y);
+  takeStep(y, x) {
+    this.board.stepOnSquare(y, x);
   }
 }
 

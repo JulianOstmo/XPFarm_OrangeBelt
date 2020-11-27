@@ -1,10 +1,13 @@
 class Board {
-  constructor() {
+  constructor(mineCoordinates = []) {
     this.mines = [
       [null, null, null],
-      [null, true, null],
+      [null, null, null],
       [null, null, null],
     ];
+    mineCoordinates.forEach(([y, x]) => {
+      this.mines[y][x] = true;
+    });
     this.squares = [
       [' ', ' ', ' '],
       [' ', ' ', ' '],

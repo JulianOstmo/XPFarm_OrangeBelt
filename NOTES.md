@@ -36,7 +36,7 @@
 - ✅ Fix test coverage
 
 # Pomodoro 4
-- must be able to assign mine location on Board initialisation
+- ✅ must be able to assign mine location on Board initialisation
 - check stepped on square if it is a mine or clear
 - if square is clear, show number of mines square touches
 - update message with number of neighbouring mines

@@ -19,13 +19,17 @@
 
 # Pomodoro 2
 
-- Add bombs property to Board object
-- Initialise board with 1 bomb hardcoded to the center square
-- Create player test and object
+- ✅ Add test to check board has 1 mine total and it is in the center of the board
+- ✅ Add mines property to Board object
+- ✅ Initialise board with 1 mine hardcoded to the center square
+- ✅ Create player test and object
 - Player steps on center square
-- Board prints board with explosion ("X") in center square and message `[Sandbox 3x3] BOOM! - Game Over.`
+- create test to check that Board prints with explosion ("X") in center square and message `[Sandbox 3x3] BOOM! - Game Over.`
 
 # Tech Debt
 - board.js squares are pre-printed
 - need to create formatting and printing functions
+- Board could be passed he output callback method (i.e. console.log)
 - board.js squares should be a two dimensional array
+- Mine could be it's own class
+- Guards needed (e.g. if `x` or `y` passed is `null`)

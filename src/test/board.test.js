@@ -24,4 +24,24 @@ describe('Game board creation phase', () => {
 
     expect(consoleLogSpy).toHaveBeenCalledWith(`${emptyBoard}\n\n${message}`);
   });
+
+  it('should be created with 1 mine in the central square', () => {
+    const totalMines = board.mines.flat().reduce((count, cell) => {
+      if (cell) {
+        return count + 1;
+      }
+      return count;
+    }, 0);
+    expect(totalMines).toBe(1);
+    expect(board.mines[1][1]).toBe(true);
+  });
+});
+
+describe('Revealing square value', () => {
+  it('should add explosion ("X") to board when bomb stepped on', () => {
+    const [x, y] = [1, 1];
+    const board = new Board();
+    board.stepOnSquare(x, y);
+    expect(board.squares[x][y]).toBe('X');
+  });
 });
